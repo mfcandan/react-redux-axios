@@ -1,8 +1,6 @@
 import React from 'react'
 
-export default function Ninjas(props) {
-    const {ninjas}=props;
-
+export default function Ninjas({ninjas}) {
     const ninjaList = ninjas.map(ninja => {
         return (
                 <div className="ninja" key={ninja.id}>
