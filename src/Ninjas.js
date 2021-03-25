@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Ninjas({ninjas}) {
+export default function Ninjas({ninjas, deleteNinja}) {
     const ninjaList = ninjas.map(ninja => {
         return ninja.age > 20 ? (
             (
@@ -8,6 +8,7 @@ export default function Ninjas({ninjas}) {
                     <div>Name: {ninja.name} </div>
                     <div>Age: {ninja.age}</div>
                     <div>Belt: {ninja.belt} </div>
+                    <button onClick={() => deleteNinja(ninja.id)}>DELETE Ninja</button>
                 </div>
             )
         ) : null;
